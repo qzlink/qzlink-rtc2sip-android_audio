@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sdk.android">
+
+    <!--<!–允许程序连接网络–>-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--<!–允许程序录制音频–>-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!--<!–允许程序使用照相设备–>-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--<!–允许程序修改全局音频设置–>-->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!--<!–允许程序获取网络状态–>-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--<!–允许对存储空间进行读写–>-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--<!–允许程序连接到已配对的蓝牙设备–>-->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!--读写-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+
+    <application
+        android:name="com.sdk.android.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/sdklogo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:node="replace">
+        <activity
+            android:name="com.sdk.android.ui.LoginActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.sdk.android.ui.CountryCodeActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.sdk.android.ui.AudioChatActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.sdk.android.ui.WebViewActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.sdk.android.ui.HomeActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.sdk.android.ui.ContactsActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <activity
+            android:name="com.sdk.android.ui.CallActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <activity
+            android:name="com.sdk.android.ui.ConversationActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.sdk.android.ui.ConfDetailActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:theme="@style/AppTheme" />
+
+        <service android:name="com.sdk.android.service.FloatVideoWindowService" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">VoIP SIP电话</string>
+    <string name="agora_app_id">c645a288dd6a46f895b6b24ade34a89c</string>
+    <string name="choose_country">选择国家</string>
+    <string name="input">请你输入呼叫号码</string>
+    <string name="calling">正在呼叫</string>
+    <string name="keyboard">键盘</string>
+    <string name="mute">静音</string>
+    <string name="record">录音</string>
+    <string name="handsfree">扩音</string>
+    <string name="login">登录</string>
+    <string name="input_appid">请输入appid</string>
+    <string name="isSip">isSip</string>
+    <string name="text">密码任意填写\n请把推广页面的对接码输入域名栏即可登录</string>
+    <string name="offical_url">联系我们</string>
+    <string name="email">bd@qzlink.com</string>
+    <string name="phone">13922202463</string>
+    <string name="qq">841325130</string>
+    <string name="input_account">请输入账号</string>
+    <string name="input_pwd">请输入密码</string>
+
+    <!--键盘-->
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+    <string name="star">*</string>
+    <string name="jing">#</string>
+</resources>

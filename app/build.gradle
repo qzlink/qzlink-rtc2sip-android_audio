@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        applicationId "com.sdk.android"
+        versionCode 1
+        versionName "1.0.0"
+        minSdkVersion 19
+        targetSdkVersion 29
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', "x86", "x86_64"
+        }
+
+        lintOptions {
+            abortOnError false
+        }
+    }
+
+    buildTypes {
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.1.0-alpha09'
+    //noinspection GradleCompatible
+    implementation 'androidx.multidex:multidex:2.0.0'
+
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    implementation files('libs/pinyin4j-2.5.0.jar')
+
+    implementation project(path: ':webrtc2sip_sdk')
+    //声网
+    implementation files('libs/agora-rtc-sdk.jar')
+}

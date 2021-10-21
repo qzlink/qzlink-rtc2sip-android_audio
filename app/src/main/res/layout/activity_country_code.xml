@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp73"
+        android:background="@drawable/shape_gradiant">
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="@dimen/dp47"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:drawableLeft="@mipmap/whiteback"
+            android:drawablePadding="@dimen/dp10"
+            android:gravity="center_vertical"
+            android:text="@string/choose_country"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="@dimen/dp73"
+            android:layout_height="@dimen/dp73"
+            android:layout_centerInParent="true"
+            android:background="@color/black"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp35"
+            android:visibility="invisible" />
+
+        <com.sdk.android.widget.SideBar
+            android:id="@+id/sideBar"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+

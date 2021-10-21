@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/remote_video_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white" />
+
+        <FrameLayout
+            android:id="@+id/local_video_view_container"
+            android:layout_width="98dp"
+            android:layout_height="174dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="@dimen/dp16"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/darker_gray" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp147">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="房间号："
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_roomid"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_head_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp47"
+            android:src="@mipmap/icon" />
+
+        <TextView
+            android:id="@+id/tv_phoneNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp24"
+            android:layout_toRightOf="@id/iv_head_icon"
+            android:background="@null"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp23" />
+
+        <TextView
+            android:id="@+id/tv_inputNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp24"
+            android:layout_marginRight="@dimen/dp24"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp23"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp100"
+            android:text="@string/calling"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp67"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp65"
+            android:layout_marginTop="@dimen/dp29"
+            android:layout_marginRight="@dimen/dp65"
+            android:layout_marginBottom="@dimen/dp36">
+
+            <ImageView
+                android:id="@+id/iv_reject"
+                android:layout_width="@dimen/dp67"
+                android:layout_height="@dimen/dp67"
+                android:src="@mipmap/disconnect"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_keyboard"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/keyboard"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_disconnect"
+                android:layout_width="@dimen/dp67"
+                android:layout_height="@dimen/dp67"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/disconnect" />
+
+            <ImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/delete"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_answer"
+                android:layout_width="@dimen/dp67"
+                android:layout_height="@dimen/dp67"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/dial"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp320"
+            android:layout_above="@+id/rl">
+
+            <include
+                layout="@layout/item_keyboard"
+                android:visibility="gone" />
+
+            <include layout="@layout/item_function" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

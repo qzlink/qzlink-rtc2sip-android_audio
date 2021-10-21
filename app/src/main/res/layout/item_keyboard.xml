@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_keyboard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp47"
+        android:layout_marginRight="@dimen/dp47">
+
+        <TextView
+            android:id="@+id/tv_one"
+            style="@style/style_keyboard"
+            android:text="@string/one" />
+
+        <TextView
+            android:id="@+id/tv_two"
+            style="@style/style_keyboard"
+            android:layout_centerInParent="true"
+            android:text="@string/two" />
+
+        <TextView
+            android:id="@+id/tv_three"
+            style="@style/style_keyboard"
+            android:layout_alignParentRight="true"
+            android:text="@string/three" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp47"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="@dimen/dp47">
+
+        <TextView
+            android:id="@+id/tv_four"
+            style="@style/style_keyboard"
+            android:text="@string/four" />
+
+        <TextView
+            android:id="@+id/tv_five"
+            style="@style/style_keyboard"
+            android:layout_centerInParent="true"
+            android:text="@string/five" />
+
+        <TextView
+            android:id="@+id/tv_six"
+            style="@style/style_keyboard"
+            android:layout_alignParentRight="true"
+            android:text="@string/six" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp47"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="@dimen/dp47">
+
+        <TextView
+            android:id="@+id/tv_seven"
+            style="@style/style_keyboard"
+            android:text="@string/seven" />
+
+        <TextView
+            android:id="@+id/tv_eight"
+            style="@style/style_keyboard"
+            android:layout_centerInParent="true"
+            android:text="@string/eight" />
+
+        <TextView
+            android:id="@+id/tv_nine"
+            style="@style/style_keyboard"
+            android:layout_alignParentRight="true"
+            android:text="@string/nine" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp47"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="@dimen/dp47">
+
+        <TextView
+            android:id="@+id/tv_star"
+            style="@style/style_keyboard"
+            android:text="@string/star" />
+
+        <TextView
+            android:id="@+id/tv_zero"
+            style="@style/style_keyboard"
+            android:layout_centerInParent="true"
+            android:text="@string/zero" />
+
+        <TextView
+            android:id="@+id/tv_jing"
+            style="@style/style_keyboard"
+            android:layout_alignParentRight="true"
+            android:text="@string/jing" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

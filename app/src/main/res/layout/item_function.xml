@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_function"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom">
+
+    <TextView
+        android:id="@+id/tv_keyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp10"
+        android:drawableTop="@mipmap/keyboard"
+        android:drawablePadding="@dimen/dp10"
+        android:text="@string/keyboard"
+        android:textColor="@color/white" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_keyboard"
+        android:layout_marginTop="@dimen/dp36">
+
+        <ImageView
+            android:id="@+id/iv_mute"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:layout_marginLeft="@dimen/dp70"
+            android:scaleType="center"
+            android:src="@mipmap/mute" />
+
+        <TextView
+            android:id="@+id/tv_mute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_mute"
+            android:layout_marginLeft="@dimen/dp73"
+            android:text="@string/mute"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/iv_record"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:layout_centerHorizontal="true"
+            android:scaleType="center"
+            android:src="@mipmap/record" />
+
+        <TextView
+            android:id="@+id/tv_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_record"
+            android:layout_centerHorizontal="true"
+            android:text="@string/record"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/iv_handsfree"
+            android:layout_width="@dimen/dp36"
+            android:layout_height="@dimen/dp36"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="66dp"
+            android:scaleType="center"
+            android:src="@mipmap/handsfree" />
+
+        <TextView
+            android:id="@+id/tv_handsfree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_record"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp73"
+            android:text="@string/handsfree"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</RelativeLayout>

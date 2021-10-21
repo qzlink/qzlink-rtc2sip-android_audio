@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api 'com.alibaba:fastjson:1.1.71.android'
+}
+
+def _BASENAME = "webrtc2sip"
+def _VERSION = "_v1.0.2"
+def _DestinationPath = "build" //生成jar包的位置
+def zipFile = file('build/intermediates/aar_main_jar/release/classes.jar') //待打包文件位置
+
+task deleteBuild(type: Delete) {
+    delete _DestinationPath + _BASENAME + _VERSION + ".jar"
+}
+task makeJar(type: Jar) {
+    from zipTree(zipFile)
+    from fileTree(dir: 'src/main', includes: ['assets/**']) //将assets目录打入jar包
+    baseName = _BASENAME + _VERSION
+    destinationDir = file(_DestinationPath)
+}
+makeJar.dependsOn(deleteBuild, build)

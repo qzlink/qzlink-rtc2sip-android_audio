@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/gradient_shape">
+
+        <!--android:drawableLeft="@mipmap/whiteback"-->
+        <TextView
+            android:id="@+id/tv_conversation_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/whiteback"
+            android:drawablePadding="@dimen/dp10"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp"
+            android:lines="1"
+            android:text="通话中"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_send_error"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@mipmap/error"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp"
+            android:paddingRight="15dp"
+            android:text="报错"
+            android:textColor="#FFF"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="16dp"
+        android:text="会议室信息："
+        android:textColor="#ff585858" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_confNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="会议室信息："
+            android:textColor="#ff585858"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_did"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/dp47"
+            android:lines="1"
+            android:text="固话接入号："
+            android:textColor="#ff585858"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:text="1.内部接入：在VoIP SIP电话App拨打内部接入号进入会议；"
+        android:textColor="#ff585858"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:text="2.外部接入：使用手机电话拨打固话接入号进入本会议；"
+        android:textColor="#ff585858"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp10">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_conversation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/iv_hangup"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="21dp"
+            android:src="@mipmap/hangup" />
+
+
+        <ImageView
+            android:id="@+id/iv_answer"
+            android:layout_width="@dimen/dp67"
+            android:layout_height="@dimen/dp67"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="59dp"
+            android:layout_marginBottom="21dp"
+            android:src="@mipmap/dial"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/iv_reject"
+            android:layout_width="@dimen/dp67"
+            android:layout_height="@dimen/dp67"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="59dp"
+            android:layout_marginBottom="21dp"
+            android:src="@mipmap/disconnect"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_function"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="100dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_novoice"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:scaleType="center"
+                    android:src="@mipmap/novoice" />
+
+                <TextView
+                    android:id="@+id/tv_novoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_no"
+                    android:text="静音"
+                    android:textColor="#838383" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_record"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:scaleType="center"
+                    android:src="@mipmap/record" />
+
+                <TextView
+                    android:id="@+id/tv_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_no"
+                    android:text="录音"
+                    android:textColor="#838383" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_handsfree"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:scaleType="center"
+                    android:src="@mipmap/handsfree" />
+
+                <TextView
+                    android:id="@+id/tv_handsfree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_no"
+                    android:text="扩音"
+                    android:textColor="#838383" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_keyboard"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:visibility="gone"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<EditText-->
+        <!--android:id="@+id/et_input_num"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="#FFF"-->
+        <!--android:gravity="center"-->
+        <!--android:text="14716168095"-->
+        <!--android:textColor="#000" />-->
+
+        <!--<include layout="@layout/layout_keyboard" />-->
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="21dp"-->
+        <!--android:background="#FFF">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_down"-->
+        <!--android:layout_width="80dp"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:scaleType="center"-->
+        <!--android:src="@mipmap/down" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_delete"-->
+        <!--android:layout_width="80dp"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginRight="22dp"-->
+        <!--android:scaleType="center"-->
+        <!--android:src="@mipmap/delete" />-->
+
+        <!--</RelativeLayout>-->
+
+        <!--</LinearLayout>-->
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
